@@ -37,16 +37,17 @@
             this.dgvPrecios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrecios.Location = new System.Drawing.Point(3, 1);
             this.dgvPrecios.Name = "dgvPrecios";
-            this.dgvPrecios.Size = new System.Drawing.Size(447, 259);
+            this.dgvPrecios.Size = new System.Drawing.Size(732, 116);
             this.dgvPrecios.TabIndex = 0;
             // 
             // frmPrecios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 263);
+            this.ClientSize = new System.Drawing.Size(735, 111);
             this.Controls.Add(this.dgvPrecios);
             this.Name = "frmPrecios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrecios";
             this.Load += new System.EventHandler(this.frmPrecios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrecios)).EndInit();

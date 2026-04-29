@@ -33,15 +33,15 @@
             this.btnInfo = new System.Windows.Forms.Button();
             this.lblDistancia = new System.Windows.Forms.Label();
             this.panInformacion = new System.Windows.Forms.Panel();
-            this.mkdDistancia = new System.Windows.Forms.MaskedTextBox();
-            this.lblDestino = new System.Windows.Forms.Label();
             this.txtDestino = new System.Windows.Forms.TextBox();
+            this.lblDestino = new System.Windows.Forms.Label();
+            this.mkdDistancia = new System.Windows.Forms.MaskedTextBox();
             this.dtpIda = new System.Windows.Forms.DateTimePicker();
             this.lblIda = new System.Windows.Forms.Label();
             this.gBoxFechas = new System.Windows.Forms.GroupBox();
+            this.picAvion = new System.Windows.Forms.PictureBox();
             this.dtpVuelta = new System.Windows.Forms.DateTimePicker();
             this.lblVuelta = new System.Windows.Forms.Label();
-            this.picAvion = new System.Windows.Forms.PictureBox();
             this.panInformacion.SuspendLayout();
             this.gBoxFechas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvion)).BeginInit();
@@ -53,7 +53,7 @@
             this.btnFinalizar.Location = new System.Drawing.Point(246, 172);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(122, 31);
-            this.btnFinalizar.TabIndex = 0;
+            this.btnFinalizar.TabIndex = 5;
             this.btnFinalizar.Text = "Finalizar Reserva";
             this.btnFinalizar.UseVisualStyleBackColor = true;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
@@ -64,7 +64,7 @@
             this.btnInfo.Location = new System.Drawing.Point(24, 172);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(122, 31);
-            this.btnInfo.TabIndex = 1;
+            this.btnInfo.TabIndex = 6;
             this.btnInfo.Text = "Información";
             this.btnInfo.UseVisualStyleBackColor = true;
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
@@ -93,15 +93,14 @@
             this.panInformacion.TabIndex = 4;
             this.panInformacion.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // mkdDistancia
+            // txtDestino
             // 
-            this.mkdDistancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mkdDistancia.Location = new System.Drawing.Point(253, 13);
-            this.mkdDistancia.Mask = "99999";
-            this.mkdDistancia.Name = "mkdDistancia";
-            this.mkdDistancia.Size = new System.Drawing.Size(103, 21);
-            this.mkdDistancia.TabIndex = 5;
-            this.mkdDistancia.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mkdDistancia_MaskInputRejected);
+            this.txtDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDestino.Location = new System.Drawing.Point(67, 13);
+            this.txtDestino.Name = "txtDestino";
+            this.txtDestino.Size = new System.Drawing.Size(100, 21);
+            this.txtDestino.TabIndex = 0;
+            this.txtDestino.TextChanged += new System.EventHandler(this.txtDestino_TextChanged);
             // 
             // lblDestino
             // 
@@ -114,21 +113,22 @@
             this.lblDestino.Text = "Destino:";
             this.lblDestino.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtDestino
+            // mkdDistancia
             // 
-            this.txtDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDestino.Location = new System.Drawing.Point(67, 13);
-            this.txtDestino.Name = "txtDestino";
-            this.txtDestino.Size = new System.Drawing.Size(100, 21);
-            this.txtDestino.TabIndex = 7;
-            this.txtDestino.TextChanged += new System.EventHandler(this.txtDestino_TextChanged);
+            this.mkdDistancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mkdDistancia.Location = new System.Drawing.Point(253, 13);
+            this.mkdDistancia.Mask = "99999";
+            this.mkdDistancia.Name = "mkdDistancia";
+            this.mkdDistancia.Size = new System.Drawing.Size(103, 21);
+            this.mkdDistancia.TabIndex = 1;
+            this.mkdDistancia.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mkdDistancia_MaskInputRejected);
             // 
             // dtpIda
             // 
             this.dtpIda.Location = new System.Drawing.Point(67, 28);
             this.dtpIda.Name = "dtpIda";
             this.dtpIda.Size = new System.Drawing.Size(212, 20);
-            this.dtpIda.TabIndex = 8;
+            this.dtpIda.TabIndex = 3;
             // 
             // lblIda
             // 
@@ -155,12 +155,22 @@
             this.gBoxFechas.TabStop = false;
             this.gBoxFechas.Text = "Fechas";
             // 
+            // picAvion
+            // 
+            this.picAvion.Image = ((System.Drawing.Image)(resources.GetObject("picAvion.Image")));
+            this.picAvion.Location = new System.Drawing.Point(285, 9);
+            this.picAvion.Name = "picAvion";
+            this.picAvion.Size = new System.Drawing.Size(77, 85);
+            this.picAvion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAvion.TabIndex = 11;
+            this.picAvion.TabStop = false;
+            // 
             // dtpVuelta
             // 
             this.dtpVuelta.Location = new System.Drawing.Point(67, 65);
             this.dtpVuelta.Name = "dtpVuelta";
             this.dtpVuelta.Size = new System.Drawing.Size(212, 20);
-            this.dtpVuelta.TabIndex = 10;
+            this.dtpVuelta.TabIndex = 4;
             // 
             // lblVuelta
             // 
@@ -171,16 +181,6 @@
             this.lblVuelta.Size = new System.Drawing.Size(44, 15);
             this.lblVuelta.TabIndex = 9;
             this.lblVuelta.Text = "Vuelta:";
-            // 
-            // picAvion
-            // 
-            this.picAvion.Image = ((System.Drawing.Image)(resources.GetObject("picAvion.Image")));
-            this.picAvion.Location = new System.Drawing.Point(285, 9);
-            this.picAvion.Name = "picAvion";
-            this.picAvion.Size = new System.Drawing.Size(77, 85);
-            this.picAvion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAvion.TabIndex = 11;
-            this.picAvion.TabStop = false;
             // 
             // frmMain
             // 

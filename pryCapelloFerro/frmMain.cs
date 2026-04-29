@@ -14,7 +14,6 @@ namespace pryCapelloFerro
     {
 
         int kmPrecio = 5;
-        int descuento = 1/2;
 
         public frmMain()
         {
@@ -69,10 +68,21 @@ namespace pryCapelloFerro
 
             int dias = (dtpVuelta.Value - dtpIda.Value).Days;
 
-            if (mkdDistancia.Value >= 100 && dias >= 7)
-            {
+            int distancia = int.Parse(mkdDistancia.Text);
+            int costoViaje = 0;
 
+            if (distancia >= 100 && dias >= 7)
+            {
+                costoViaje = distancia * kmPrecio / 2;
+                MessageBox.Show("El precio del viaje a " + txtDestino.Text + " sale un total de $" + costoViaje, "Gracias!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            } else
+            {
+                costoViaje = distancia * kmPrecio;
+                MessageBox.Show("El precio del viaje a " + txtDestino.Text + " sale un total de $" + costoViaje,  "Gracias!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+                
         }
     }
 }
