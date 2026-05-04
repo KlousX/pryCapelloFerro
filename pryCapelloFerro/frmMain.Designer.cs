@@ -192,9 +192,11 @@
             this.Controls.Add(this.panInformacion);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.btnFinalizar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ferro Viajes";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panInformacion.ResumeLayout(false);
             this.panInformacion.PerformLayout();
             this.gBoxFechas.ResumeLayout(false);
