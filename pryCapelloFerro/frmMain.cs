@@ -75,14 +75,16 @@ namespace pryCapelloFerro
             {
                 costoViaje = distancia * kmPrecio / 2;
                 MessageBox.Show("El precio del viaje a " + txtDestino.Text + " sale un total de $" + costoViaje, "Gracias!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
             } else
             {
                 costoViaje = distancia * kmPrecio;
                 MessageBox.Show("El precio del viaje a " + txtDestino.Text + " sale un total de $" + costoViaje,  "Gracias!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
             }
-                
+
+            txtDestino.Clear();
+            mkdDistancia.Clear();
+            txtDestino.Focus();
+
         }
 
         private void frmMain_Load(object sender, EventArgs e)
